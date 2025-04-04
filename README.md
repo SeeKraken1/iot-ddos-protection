@@ -1,5 +1,5 @@
 
-# IoT DDoS Detection Project
+# IoT DDoS Detection Project (Sentinel)
 
 ## Overview
 This repository implements a system for detecting Distributed Denial-of-Service (DDoS) attacks in IoT environments using data from the **UNSW BoT-IoT 2018** dataset. The system employs a machine learning model to classify network traffic as benign or malicious. **This repository focuses on**:
