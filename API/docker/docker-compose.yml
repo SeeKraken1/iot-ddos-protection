@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  iot-ddos-api:
+    build: .
+    ports:
+      - "5000:5000"
+    restart: always
+    environment:
+      - PORT=5000
+      - MODEL_PATH=/app/model/iot_ddos_rf_model.pkl
+      - MAPPINGS_PATH=/app/model/feature_mappings.pkl
+    volumes:
+      - ./logs:/app/logs
