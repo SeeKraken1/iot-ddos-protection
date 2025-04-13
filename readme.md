@@ -222,7 +222,7 @@ If you use this code in your research, please cite:
 
 ```
 @software{IoT_DDoS_Protection,
-  author = {Your Name},
+  author = {Kevin Kfoury},
   title = {IoT DDoS Protection: Lightweight Neural Networks for Attack Detection},
   year = {2025},
   url = {https://github.com/yourusername/IoT-DDoS-Protection},
