@@ -13,6 +13,7 @@ IoT devices are increasingly targeted by DDoS attacks due to their limited secur
 3. Train a lightweight neural network suitable for resource-constrained environments
 4. Optimize the model for low-power deployments (TensorFlow Lite)
 5. Deploy the model via a containerized API for integration into existing security infrastructure
+6. Provide a user-friendly dashboard for visualization and monitoring
 
 ## Repository Structure
 
@@ -38,6 +39,7 @@ IoT devices are increasingly targeted by DDoS attacks due to their limited secur
 │   └── Training.py                 # Neural network training pipeline
 ├── API.py                          # Model serving REST API
 ├── dockerfile                      # Container definition for deployment
+├── frontend.py                     # Streamlit web dashboard
 └── requirements.txt                # Python dependencies
 ```
 
@@ -192,6 +194,45 @@ print(f"Prediction: {result['prediction']}")
 print(f"Confidence: {result['confidence']:.4f}")
 ```
 
+## Frontend Dashboard
+
+The project includes a Streamlit-based web dashboard (`frontend.py`) that provides a user-friendly interface for:
+
+1. Visualizing network traffic and DDoS detection results in real-time
+2. Submitting custom traffic data for detection
+3. Viewing model performance metrics
+4. Learning about the detection methodology
+
+### Running the Frontend Dashboard
+
+To run the dashboard:
+
+1. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+2. Make sure the API is running (either locally or in a Docker container):
+```bash
+python API.py
+```
+
+3. Start the Streamlit frontend:
+```bash
+streamlit run frontend.py
+```
+
+4. Open your browser and navigate to http://localhost:8501
+
+### Dashboard Features
+
+- **Dashboard Visualization**: Simulates network traffic and highlights detected attacks
+- **Submit Custom Traffic**: Upload your own CSV/JSON files for detection or manually input traffic parameters
+- **Model Performance Metrics**: View accuracy, precision, recall, and F1-score metrics
+- **Detection Methodology**: Learn about the technical approach behind the system
+
+![Dashboard Screenshot](path/to/dashboard_screenshot.png)
+
 ## Deployment
 
 The model can be deployed using Docker:
@@ -206,6 +247,8 @@ docker run -p 5000:5000 ddos-protection-api
 
 ## Requirements
 
+See `requirements.txt` for a complete list of dependencies. Key dependencies include:
+
 ```
 flask==2.0.1
 pandas==1.3.3
@@ -215,6 +258,8 @@ scikit-learn==1.0.1
 joblib==1.1.0
 flask-swagger-ui==3.36.0
 gunicorn==20.1.0
+streamlit==1.28.0
+altair==5.0.1
 ```
 
 ## Future Work
@@ -223,7 +268,7 @@ gunicorn==20.1.0
 - Implement anomaly detection for zero-day attacks
 - Develop edge-optimized variants for direct deployment on IoT gateways
 - Add federated learning capabilities for distributed model improvement
-- Create a dashboard for visualizing attack patterns and network threats
+- Enhance the dashboard with more visualization options and real-time monitoring
 
 ## License
 
