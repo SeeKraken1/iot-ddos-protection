@@ -258,8 +258,6 @@ scikit-learn==1.0.1
 joblib==1.1.0
 flask-swagger-ui==3.36.0
 gunicorn==20.1.0
-streamlit==1.28.0
-altair==5.0.1
 ```
 
 ## Future Work
