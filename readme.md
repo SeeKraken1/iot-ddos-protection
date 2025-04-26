@@ -45,7 +45,7 @@ IoT devices are increasingly targeted by DDoS attacks due to their limited secur
 
 This project uses two primary data sources:
 
-1. **UNSW_2018_IoT_Botnet_Dataset**: Contains real-world network traffic data from IoT devices under normal operation and various DDoS attack scenarios.
+1. **UNSW_2018_IoT_Botnet_Dataset**: Contains real-world network traffic data from IoT devices under normal operation and various DDoS attack scenarios, https://research.unsw.edu.au/projects/bot-iot-dataset .
 
 2. **Synthetic Data**: Generated to supplement the real-world data, providing additional attack patterns and scenarios not covered in the original dataset. This synthetic data helps improve model generalization and robustness.
 
