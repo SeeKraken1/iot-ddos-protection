@@ -24,10 +24,10 @@ COPY ./Models/ddos_model_final_int8_20250412_205328.tflite /app/models/
 COPY ./Models/preprocessor_20250412_205328.joblib /app/models/
 
 # Copy application code
-COPY API.py /app/api.py
+COPY API.py /app/API.py
 
 # Make port 5000 available
 EXPOSE 5000
 
 # Use python for direct execution
-CMD ["python", "/app/api.py"]
+CMD ["python", "/app/API.py"]
